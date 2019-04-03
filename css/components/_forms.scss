@@ -1,0 +1,109 @@
+.form-group {
+    position: relative;
+
+    label {
+        @extend %fs-xs;
+        text-transform: capitalize;
+        margin-bottom: 2px;
+
+        .astrix {
+            color: $text-danger;
+        }
+    }
+
+    .custom {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-left: 1px solid #d1dbeb;
+        height: 100%;
+        padding: 10px 15px;
+
+        .fa-calendar-week {
+            color: $text-orange-light;
+        }
+    }
+
+    .select-overflow {
+        overflow: hidden;
+        border-right: 1px solid #d1dbeb;
+        .form-control {
+            @include calc(width,85%,'100% + 20px');
+        }
+    }
+
+    .form-control {
+        outline: 0;
+        @include box-shadow(0, 0, 0, transparent);
+        border: 1px solid #d1dbeb;
+        @include border-radius(4px);
+        height: 40px;
+        position: relative;
+        background-color: transparent;
+
+        &:focus,
+        &:active,
+        &:hover {
+            outline: 0;
+            @include box-shadow(0, 0, 0, transparent);
+            border: 1px solid #d1dbeb;
+        }
+
+        &.textarea {
+            height: auto;
+        }
+
+    }
+}
+
+/* checkbox buttons */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    @extend %fs-sm;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        @include square(0px);
+    }
+
+    .checkmark {
+        @include position(absolute, 0px, auto, auto, 0px);
+        @include square(20px);
+        background-color: $bg-white;
+        border: 1px solid $border-basic;
+        @include border-radius(50%);
+
+        &::after {
+            display: none;
+            @include afterbefore(2px, auto, auto, 6px);
+            @include rectangle(7px, 12px);
+            border: solid $border-white;
+            border-width: 0 3px 3px 0;
+            @include transform(rotate(45deg));
+        }
+    }
+
+    &:hover input~.checkmark {
+        background-color: $bg-success;
+        border: 1px solid $border-success;
+    }
+
+    input:checked~.checkmark {
+        background-color: $bg-success;
+        border: 1px solid $border-success;
+    }
+
+    input:checked~.checkmark:after {
+        display: block;
+    }
+}

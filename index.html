@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pepper Cloud Task</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="steps-container">
+                <button class="btn btn-nothing steps selected">
+                    <div class="d-flex justify-content-between">
+                        Status 1
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </button>
+                <button class="btn btn-nothing steps next">
+                    <div class="d-flex justify-content-between">
+                        New
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </button>
+                <button class="btn btn-nothing steps">
+                    <div class="d-flex justify-content-between">
+                        Working
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </button>
+                <button class="btn btn-nothing steps">
+                    <div class="d-flex justify-content-between">
+                        Nurturing
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </button>
+                <button class="btn btn-nothing steps">
+                    <div class="d-flex justify-content-between">
+                        Converted
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </button>
+            </div>
+            <div class="admin-tabs">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="activity-tab" data-toggle="tab" href="#activity" role="tab"
+                            aria-controls="activity" aria-selected="true">Activity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info"
+                            aria-selected="false">Information</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="activity" role="tabpanel" aria-labelledby="activity-tab">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="card">
+                                    <div class="admin-tabs border-0">
+                                        <div class="card-header pl-lesss">
+                                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="log-tab" data-toggle="tab" href="#log"
+                                                        role="tab" aria-controls="log" aria-selected="false">Log
+                                                        Calls</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="tasks-tab" data-toggle="tab"
+                                                        href="#tasks" role="tab" aria-controls="tasks"
+                                                        aria-selected="true">Tasks</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="log-tab" data-toggle="tab" href="#log"
+                                                        role="tab" aria-controls="log" aria-selected="false">Event</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="log-tab" data-toggle="tab" href="#log"
+                                                        role="tab" aria-controls="log" aria-selected="false">Make
+                                                        Note</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="log-tab" data-toggle="tab" href="#log"
+                                                        role="tab" aria-controls="log" aria-selected="false">Add
+                                                        Attachment</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="log-tab" data-toggle="tab" href="#log"
+                                                        role="tab" aria-controls="log" aria-selected="false">Activity
+                                                        Set</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="log-tab" data-toggle="tab" href="#log"
+                                                        role="tab" aria-controls="log" aria-selected="false">Custom
+                                                        Field</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="tab-content" id="myTabContent">
+                                                <div class="tab-pane fade" id="log" role="tabpanel"
+                                                    aria-labelledby="log-tab">
+                                                </div>
+                                                <div class="tab-pane fade show active" id="tasks" role="tabpanel"
+                                                    aria-labelledby="tasks-tab">
+                                                    <h5 class="sub-heading">New Task</h5>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Task Type<span class="astrix">*</span></label>
+                                                                <div class="position-relative">
+                                                                    <div class="select-overflow">
+                                                                        <select class="form-control">
+                                                                            <option value=""></option>
+                                                                            <option value=""></option>
+                                                                            <option value=""></option>
+                                                                            <option value=""></option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="custom">
+                                                                        <i class="fas fa-caret-down"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Assigned To<span class="astrix">*</span></label>
+                                                                <div class="position-relative">
+                                                                    <div class="select-overflow">
+                                                                        <select class="form-control">
+                                                                            <option value=""></option>
+                                                                            <option value=""></option>
+                                                                            <option value=""></option>
+                                                                            <option value=""></option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="custom">
+                                                                        <i class="fas fa-caret-down"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-xl-6 col-lg-12 col-sm-6 col-12">
+                                                                    <div class="form-group">
+                                                                        <label>Start Date</label>
+                                                                        <div class="position-relative">
+                                                                            <input type="date" class="form-control" />
+                                                                            <div class="custom">
+                                                                                <i class="fas fa-calendar-week"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xl-6 col-lg-12 col-sm-6 col-12">
+                                                                    <div class="form-group">
+                                                                        <label>End Date</label>
+                                                                        <div class="position-relative">
+                                                                            <input type="date" class="form-control" />
+                                                                            <div class="custom">
+                                                                                <i class="fas fa-calendar-week"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Remind On</label>
+                                                                <div class="position-relative">
+                                                                    <input type="date" class="form-control" />
+                                                                    <div class="custom">
+                                                                        <i class="fas fa-calendar-week"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>Subject</label>
+                                                                <input type="text" class="form-control" />
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Details</label>
+                                                                <textarea rows="7"
+                                                                    class="form-control textarea"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="offset-lg-6 col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <button class="btn btn-block">Cancel</button>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <button
+                                                                        class="btn btn-orange btn-block">Apply</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="my-5" />
+                                                    <h6 class="sub-heading">Task List</h6>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>#</th>
+                                                                    <th>Subject</th>
+                                                                    <th>Type</th>
+                                                                    <th>Assigned To</th>
+                                                                    <th>Due Date</th>
+                                                                    <th>Status</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td><a href="javascript:void(0);">Sample</a></td>
+                                                                    <td>To Do</td>
+                                                                    <td>Ravi Kumar</td>
+                                                                    <td>13 Nov 2018</td>
+                                                                    <td>Not Started</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2</td>
+                                                                    <td><a href="javascript:void(0);">Sample</a></td>
+                                                                    <td>To Do</td>
+                                                                    <td>Ravi Kumar</td>
+                                                                    <td>13 Nov 2018</td>
+                                                                    <td>Not Started</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3</td>
+                                                                    <td><a href="javascript:void(0);">Sample</a></td>
+                                                                    <td>To Do</td>
+                                                                    <td>Ravi Kumar</td>
+                                                                    <td>13 Nov 2018</td>
+                                                                    <td>Not Started</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>4</td>
+                                                                    <td><a href="javascript:void(0);">Sample</a></td>
+                                                                    <td>To Do</td>
+                                                                    <td>Ravi Kumar</td>
+                                                                    <td>13 Nov 2018</td>
+                                                                    <td>Not Started</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="table-footer">
+                                                        <button class="btn btn-nothing btn-block text-right">View
+                                                            More <i class="fas fa-caret-down"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-header p-3">
+                                        <div class="form-group mb-0">
+                                            <div class="select-overflow">
+                                                <select class="form-control">
+                                                    <option value="">Filter by Date</option>
+                                                    <option value=""></option>
+                                                    <option value=""></option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                            <div class="custom">
+                                                <i class="fas fa-caret-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body py-3 px-0">
+                                        <div class="task-overflow">
+                                            <div class="task-card-container px-3">
+                                                <div class="task-card">
+                                                    <div class="left">
+                                                        <span class="round">
+                                                            <i class="fas fa-phone"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h6>Informed Product Features</h6>
+                                                        <p>You contacted with <span>Charles Gomez</span></p>
+                                                        <p>13 Nov 2018. 05:49 AM</p>
+                                                    </div>
+                                                </div>
+                                                <div class="task-card">
+                                                    <div class="left">
+                                                        <span class="round green">
+                                                            <i class="fas fa-check"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h6>Informed Product Features</h6>
+                                                        <p>You contacted with <span>Charles Gomez</span></p>
+                                                        <p>13 Nov 2018. 05:49 AM</p>
+                                                    </div>
+                                                </div>
+                                                <div class="task-card">
+                                                    <div class="left">
+                                                        <span class="round red">
+                                                            <i class="fas fa-file-alt"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h6>Informed Product Features</h6>
+                                                        <p>You contacted with <span>Charles Gomez</span></p>
+                                                        <p>13 Nov 2018. 05:49 AM</p>
+                                                    </div>
+                                                </div>
+                                                <div class="task-card">
+                                                    <div class="left">
+                                                        <span class="round">
+                                                            <i class="fas fa-phone"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h6>Informed Product Features</h6>
+                                                        <p>You contacted with <span>Charles Gomez</span></p>
+                                                        <p>13 Nov 2018. 05:49 AM</p>
+                                                    </div>
+                                                </div>
+                                                <div class="task-card">
+                                                    <div class="left">
+                                                        <span class="round green">
+                                                            <i class="fas fa-check"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h6>Informed Product Features</h6>
+                                                        <p>You contacted with <span>Charles Gomez</span></p>
+                                                        <p>13 Nov 2018. 05:49 AM</p>
+                                                    </div>
+                                                </div>
+                                                <div class="task-card">
+                                                    <div class="left">
+                                                        <span class="round">
+                                                            <i class="fas fa-phone"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h6>Informed Product Features</h6>
+                                                        <p>You contacted with <span>Charles Gomez</span></p>
+                                                        <p>13 Nov 2018. 05:49 AM</p>
+                                                    </div>
+                                                </div>
+                                                <div class="task-card">
+                                                    <div class="left">
+                                                        <span class="round green">
+                                                            <i class="fas fa-check"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="right">
+                                                        <h6>Informed Product Features</h6>
+                                                        <p>You contacted with <span>Charles Gomez</span></p>
+                                                        <p>13 Nov 2018. 05:49 AM</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

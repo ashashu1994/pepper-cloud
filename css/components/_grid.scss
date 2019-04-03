@@ -1,0 +1,184 @@
+.wrapper {
+    padding-top: 15px;
+}
+
+.sub-heading {
+    color: $text-black;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.admin-tabs {
+    &.border-0 {
+        .nav.nav-tabs {
+            border: 0;
+
+            li {
+                a {
+                    border-bottom: 2px solid transparent;
+                    padding: 6px 20px;
+                    text-transform: capitalize;
+                    @include border-radius(1px);
+
+                    &.active {
+                        background-color: lighten($bg-orange-light, 40%);
+                        border-bottom: 2px solid $border-orange-light;
+                        color: $text-black;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav.nav-tabs {
+        position: relative;
+        border-bottom: 0px;
+        border-bottom: 2px solid $border-light;
+
+        li {
+            a {
+                padding: 10px 25px;
+                display: block;
+                color: $text-grey;
+                @extend %fw-sbold;
+                background-color: transparent;
+                border: 0;
+                border-bottom: 3px solid transparent;
+                text-transform: uppercase;
+
+                &.active {
+                    border-bottom: 3px solid $border-orange;
+                    color: $text-orange;
+                }
+            }
+
+            .serviceClass {
+                background: $bg-white;
+                border: 1px solid $bg-table;
+            }
+        }
+    }
+}
+
+.steps-container {
+    background-color: $bg-white;
+    padding: 15px;
+    @include shadow-default;
+    @include border-radius(5px);
+    margin-bottom: 20px;
+
+    .steps {
+        width: 18%;
+        margin-right: 2%;
+        float: left;
+        height: 50px;
+        padding: 5px 0px 5px 25px;
+        border: 1px solid #cfd9ea;
+        border-right: 0;
+        border-left: 0;
+        color: #555;
+        @include border-radius(0);
+        position: relative;
+
+        &::after {
+            content: url("../images/right.png");
+            position: absolute;
+            right: -18px;
+            top: -1px;
+        }
+
+        &::before {
+            content: url("../images/left.png");
+            position: absolute;
+            left: 0;
+            top: -1px;
+        }
+
+        &:first-child {
+            border-left: 1px solid #cfd9ea;
+
+            &::before {
+                content: "";
+            }
+
+            &.selected::before {
+                content: "";
+            }
+        }
+
+        &:last-child {
+            border-right: 1px solid #cfd9ea;
+            width: 20%;
+            margin-right: 0;
+
+            &.selected::after {
+                content: "";
+            }
+
+            &::after {
+                content: "";
+            }
+
+            &.next::after {
+                content: "";
+            }
+        }
+
+        &.selected {
+            background-color: $bg-success;
+            border-color: $border-success;
+            color: #fff;
+            font-weight: 600;
+
+            &::before {
+                content: url("../images/selected-left.png")
+            }
+
+            &::after {
+                content: url("../images/selected-right.png")
+            }
+        }
+
+        &.next {
+            background-color: lighten($bg-orange-light, 40%);
+            border-color: lighten($border-orange-light, 40%);
+
+            &::before {
+                content: url("../images/next-left.png")
+            }
+
+            &::after {
+                content: url("../images/next-right.png")
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .steps-container {
+        .steps {
+            width: 47%;
+            margin-right:3%;
+            &:nth-child(3),&:nth-child(4),&:nth-child(5){
+                display:none;
+            }
+        }
+    }
+}
+@media screen and (max-width:576px) {
+    .steps-container {
+        .steps {
+            width: 94%;
+            margin-right:6%;
+            &:nth-child(2){
+                display:none;
+            }
+        }
+    }
+}

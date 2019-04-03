@@ -1,0 +1,84 @@
+.card {
+    margin-top: 25px;
+    border: 1px solid $border-table;
+    @include border-radius(5px);
+    @include shadow-default;
+    margin-bottom: 20px;
+
+    .card-header {
+        background-color: $bg-white;
+
+        &.pl-lesss {
+            padding-left: 5px;
+        }
+    }
+}
+
+.task-overflow {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 700px;
+}
+
+.task-card-container {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 30px;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        border-right: 2px dashed #515185;
+    }
+
+    .task-card {
+        border: 1px solid $border-basic;
+        @include border-radius(2px);
+        margin-bottom: 25px;
+        padding: 20px;
+        position: relative;
+        background-color: #fff;
+        position: relative;
+
+        p {
+            margin: 0;
+        }
+
+        .left {
+            position: absolute;
+            left: 20px;
+            top: 40px;
+
+            .round {
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                padding-top: 3px;
+                display: inline-block;
+                @include border-radius(50%);
+                color: $text-primary;
+                border: 2px solid $border-primary;
+
+                &.green {
+                    color: $text-success;
+                    border: 2px solid $border-success;
+                }
+
+                &.red {
+                    color: $text-danger;
+                    border: 2px solid $border-danger;
+                }
+            }
+        }
+
+        .right {
+            margin-left: 50px;
+
+            h6 {
+                @extend %fw-bold;
+            }
+        }
+    }
+}

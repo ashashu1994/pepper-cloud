@@ -1,0 +1,27 @@
+$modal-elements: fields, form-controls, alerts, autocomplete-dropdown;
+
+//usage
+//In order to use this tool and to retrieve the z-index value to assign to each element, you can use the
+//index() Sass function within the correct module file, as shown below:
+
+//.modal-alerts {
+//  z-index: index($modal-elements, alerts);
+//  ....
+//}
+
+.task-card-container {
+    &::after {
+        z-index: 0;
+    }
+    .task-card {
+        z-index: 1;
+    }
+}
+.form-group {
+    .custom {
+        z-index: 0;
+    }
+    .form-control {
+        z-index: 1;
+    }
+}

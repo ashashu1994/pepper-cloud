@@ -1,0 +1,24 @@
+.table {
+    border: 1px solid $border-light;
+    margin-bottom: 0;
+
+    thead {
+        th {
+            border-bottom-width: 1px;
+            color:$text-grey;
+            @extend %fw-sbold;
+        }
+    }
+}
+
+.table-footer {
+    border: 1px solid $border-light;
+    .btn.btn-nothing {
+        width: 100%;
+        display: block;
+        @include box-shadow(0,-1px,5px,rgba(0,0,0,0.1));
+        padding:10px 15px;
+        @include border-radius(0);
+        color:$text-orange;
+    }
+}

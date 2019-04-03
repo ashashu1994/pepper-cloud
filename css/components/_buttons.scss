@@ -1,0 +1,68 @@
+.btn {
+    // basic default button
+    @extend %fs-sm;
+    @extend %fw-sbold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6px 25px;
+    letter-spacing: 0.1em;
+    @include border-radius(2px);
+    color: $text-basic;
+    margin: 0;
+    outline: 0;
+    background: $bg-white;
+    color: $text-basic;
+    border: 1px solid $border-basic;
+    @include box-shadow(0, 0, 0, transparent);
+    &.btn:not(:disabled):not(.disabled):active:focus {
+        @include box-shadow(0, 0, 0, transparent);
+        outline: 0;
+    }
+    &:focus,
+    &:hover,
+    &:active {
+        border: 1px solid darken($border-basic, 2%);
+        outline:0;
+        color: darken($text-basic,10%);
+    }
+    // button primary (blue)
+    &.btn-orange {
+        color: $text-orange;
+        border: 1px solid $border-orange;
+
+        &:focus,
+        &:hover,
+        &:active,
+        &:not(:disabled):not(.disabled):active {
+            border-color: darken($border-orange, 5%);
+        }
+    }
+    // button nothing
+    &.btn-nothing {
+        padding: 0;
+        background: transparent;
+        border: 0px;
+        @include box-shadow(0, 0, 0, transparent);
+        text-transform: none;
+
+        &:focus,
+        &:hover,
+        &:active {
+            @include box-shadow(0, 0, 0, transparent);
+        }
+    }
+
+    // button without radius
+    &.btn-no-radius {
+        @include border-radius(0px);
+    }
+}
+
+.btn-group-margin {
+    .btn {
+        margin-right: 10px;
+        &:last-child{
+            margin:0;
+        }
+    }
+}

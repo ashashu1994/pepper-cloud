@@ -1,0 +1,20 @@
+$primary-font: Roboto;
+
+%fs-xs {
+    //12px
+    font-size: 0.8571rem;
+}
+
+%fs-sm {
+    //14px
+    font-size: 1rem;
+}
+
+
+%fw-sbold {
+    font-weight: 500;
+}
+
+%fw-bold {
+    font-weight: 700;
+}

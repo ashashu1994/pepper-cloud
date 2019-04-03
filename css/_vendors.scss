@@ -1,0 +1,43 @@
+html,body{
+  font-size:14px;
+}
+body{
+  font-family: $primary-font;
+  color:$text-grey;
+  letter-spacing: 0.3px;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  -o-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-y:scroll;
+  background-color: #f3f6f9;
+}
+a {
+  text-decoration:none;
+  &:hover,&:focus{
+    text-decoration:none;
+  }
+  color: $text-primary;
+  &:hover{
+    color: darken($text-primary,8%);
+  }
+}
+ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: $bg-light-blue;
+}
+::-webkit-scrollbar-thumb {
+  background: lighten($bg-primary,20%);
+  border-radius:5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
